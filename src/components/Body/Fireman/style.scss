@@ -1,0 +1,340 @@
+@import "../../../scss/utils/mixins";
+@import "../../../scss/utils/vars";
+
+.fireman {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 200px;
+  position: relative;
+
+  @include lg {
+    padding-top: 200px;
+  }
+
+  @include md {
+    flex-wrap: wrap;
+    padding-top: 40px;
+  }
+
+  @include sm {
+    flex-wrap: wrap;
+    padding-top: 40px;
+  }
+
+  &:after {
+    content: '';
+    z-index: 1;
+    width: 1508px;
+    height: 797px;
+    position: absolute;
+    top: -85px;
+    right: 35px;
+    background-image: url("../../../img/Vector.png");
+
+    @include lg {
+      background-image: url("../../../img/Vector.png");
+    }
+
+    @include md {
+      background-image: url("../../../img/Vector2.png");
+      width: 713px;
+      height: 482px;
+      top: -50px;
+    }
+
+    @include md2 {
+      right: 0;
+    }
+
+
+    @include sm {
+      background-image: url("../../../img/Vector3.png");
+      width: 289px;
+      height: 359px;
+      left: -15px;
+      top:-30px;
+
+    }
+  }
+
+
+
+  & .info {
+    z-index: 3;
+    width: 48%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    @include lg {
+      width: 59%;
+    }
+
+    @include md {
+      width: 100%;
+      order: 2;
+      padding-top: 150px;
+      position: relative;
+
+      &:after {
+        content: '';
+        z-index: -1;
+        width: 1508px;
+        height: 797px;
+        position: absolute;
+        top: -22%;
+        right: -70%;
+        background-image: url("../../../img/Vector.png");
+      }
+    }
+
+    @include md2 {
+      width: 60%;
+      order: unset;
+      padding-top: 30px;
+
+      &:after {
+        content: none;
+      }
+    }
+
+
+    @include sm {
+      width: 100%;
+      order: 2;
+      padding-top: 45px;
+      position: relative;
+
+      &:after {
+        content: '';
+        z-index: -1;
+        width: 1508px;
+        height: 797px;
+        position: absolute;
+        top: -45%;
+        right: -92%;
+        background-image: url("../../../img/Vector.png");
+      }
+    }
+
+    & .text {
+      & p {
+        font-size: 30px;
+        line-height: 41px;
+        color: #0C0D0D;
+        text-align: left;
+
+        @include lg {
+          font-size: 30px;
+          line-height: 41px;
+        }
+
+        @include md {
+          font-size: 26px;
+          line-height: 35px;
+        }
+
+        @include sm {
+          font-size: 24px;
+          line-height: 33px;
+
+        }
+
+      }
+
+      & .icon {
+        margin-top: 31px;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 30px;
+        color: #0F0F0F;
+        margin-left: 70px;
+        position: relative;
+        width: 400px;
+
+        @include md {
+          margin-top: 20px;
+          width: calc(100% - 70px);
+          font-size: 18px;
+          line-height: 25px;
+        }
+
+
+        @include sm {
+          width: calc(100% - 70px);
+          margin-top: 20px;
+          font-size: 18px;
+          line-height: 25px;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 8px;
+          left: -70px;
+          background-image: url("../../../img/oxygen.svg");
+          width: 44px;
+          height: 44px;
+        }
+      }
+
+    }
+
+    & .links {
+      display: flex;
+      justify-content: space-between;
+      width: 470px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+
+      @include md {
+        width: 100%;
+        margin: 24px;
+        justify-content: center;
+      }
+
+      @include md2 {
+        width: 100%;
+        justify-content: space-between;
+        margin: 24px 0 0 0;
+      }
+
+
+      @include sm {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 70px;
+      }
+
+      & .green-btn {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        color: #FFFFFF;
+        background: linear-gradient(180deg, #046726 0%, #056827 100%);
+        box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 2px;
+        padding: 12px 0 14px 0;
+        width: 203px;
+
+        @include md {
+          margin-bottom: 25px;
+        }
+
+        @include md2 {
+          margin-bottom: 0;
+          width: 48%;
+        }
+
+        @include sm {
+          margin-bottom: 25px;
+        }
+
+      }
+    }
+  }
+
+  & .img {
+    width: 52%;
+    position: relative;
+
+    @include lg {
+      width: 41%;
+    }
+    @include md {
+      width: 100%;
+      order: 1;
+      height: 230px;
+    }
+
+    @include md2 {
+      order: unset;
+      width: 40%;
+      height: auto;
+    }
+
+    @include sm {
+      width: 100%;
+      order: 1;
+      height: 230px;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      z-index: 2;
+      background-image: url("../../../img/firefighter.png");
+      background-repeat: no-repeat;
+      height: 377px;
+      width: 619px;
+
+      @include lg {
+        right: 15px;
+        top: 75px;
+        background-image: url("../../../img/firefighterLg.png");
+        width: 502px;
+        height: 306px;
+      }
+
+      @include md {
+        background-image: url("../../../img/firefighterMd.png");
+        width: 375px;
+        height: 229px;
+        right: 0;
+        bottom: -95px;
+        z-index: 3;
+      }
+
+      @include md2 {
+        background-image: url("../../../img/firefighterSm.png");
+        width: 275px;
+        height: 171px;
+        right: 0;
+        z-index: 2;
+        top: 135px;
+      }
+
+      @include sm {
+        background-image: url("../../../img/firefighterSm.png");
+        width: 275px;
+        height: 171px;
+        right: 0;
+        z-index: 3;
+      }
+
+
+    }
+  }
+
+}
+
+.bg-table {
+  width: 100%;
+  margin-top: 18px;
+
+  @include sm{
+    display: none;
+  }
+
+  & .line{
+    background: #FFFFFF;
+    height: 50px;
+    opacity: 0.02;
+    border-radius: 2px;
+
+    @include md{
+      &:first-child {
+        margin-bottom: 48px;
+        display: none;
+      }
+    }
+
+    &:first-child {
+      margin-bottom: 48px;
+    }
+
+
+  }
+}

@@ -1,0 +1,391 @@
+@import "../../../scss/utils/mixins";
+@import "../../../scss/utils/vars";
+
+.donate {
+  padding-top: 33px;
+
+  & .donate-list  {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+
+    & .table-row {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      padding: 16px;
+      flex-wrap: wrap;
+
+
+      & .name {
+        color: $mainFontColor;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 115.68%;
+        text-align: left;
+        width: 20%;
+
+
+
+        @include lg {
+          width: 20%;
+        }
+
+        @include md {
+          width: 100%;
+        }
+
+        @include sm {
+          width: 100%;
+        }
+
+      }
+
+      & .text {
+        width: 60%;
+        font-size: 16px;
+        line-height: 115.68%;
+        color: $mainFontColor;
+        opacity: 0.7;
+        text-align: left;
+
+        @include lg {
+          width: 60%;
+        }
+
+        @include md {
+          width: 100%;
+        }
+
+        @include sm {
+          width: 100%;
+          font-size: 13px;
+          line-height: 115.68%;
+        }
+
+      }
+
+      & .price {
+        width: 20%;
+        font-size: 16px;
+        line-height: 115.68%;
+        color:$mainFontColor;
+
+        @include lg {
+          width: 20%;
+        }
+
+        @include md {
+          width: 100%;
+        }
+
+        @include sm {
+          width: 100%;
+          font-size: 16px;
+          line-height: 115.68%;
+        }
+
+      }
+
+      & div:nth-child(3n) {
+        text-align: right;
+
+        @include md {
+          text-align: left;
+        }
+
+        @include sm {
+          text-align: left;
+        }
+      }
+    }
+
+    & .table-row:nth-child(even) {
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 2px;
+    }
+
+
+    & .table-header {
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 2px;
+      margin-bottom: 33px;
+      font-size: 30px;
+      line-height: 115.68%;
+      padding: 8px;
+      color: $mainFontColor;
+      text-align: center;
+
+      @include sm {
+        text-align: left;
+        font-size: 24px;
+        line-height: 115.68%;
+        background:transparent;
+        margin-bottom: 20px;
+      }
+
+    }
+
+
+  }
+
+  & .table-footer {
+    background: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+
+    @include md {
+      flex-wrap: wrap;
+    }
+
+    @include sm {
+      flex-wrap: wrap;
+    }
+
+    & .empty {
+      width: 20%;
+
+      @include lg{
+        width: 30%;
+      }
+
+    }
+
+    & .total {
+      width: 20%;
+      text-align: right;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 115.68%;
+      color: $mainFontColor;
+
+      @include lg{
+        width: 30%;
+      }
+
+      @include md {
+        width: 100%;
+        text-align: left;
+        order: 1;
+      }
+
+      @include sm {
+        width: 100%;
+        text-align: left;
+        font-size: 16px;
+        line-height: 115.68%;
+        order: 1;
+      }
+    }
+    & .btn {
+      width: 60%;
+      display: flex;
+      justify-content: center;
+
+
+
+      @include lg{
+        width: 40%;
+      }
+
+      @include md {
+        width: 100%;
+        order: 2;
+        margin-top: 35px;
+      }
+
+      @include sm {
+        width: 100%;
+        order: 2;
+        margin-top: 35px;
+      }
+
+      & button {
+        font-size: 16px;
+        line-height: 22px;
+        color: $mainFontColor;
+        opacity: .7;
+        background: transparent;
+        cursor: pointer;
+        border: 0;
+        outline: none;
+        position: relative;
+
+        @include md {
+          padding: 14px 0;
+          opacity: 0.5;
+          border: 1px solid #F8F8F8;
+          box-sizing: border-box;
+          border-radius: 1.4px;
+          width: 193px;
+        }
+
+        @include sm {
+          font-size: 16px;
+          line-height: 22px;
+          padding: 14px 0;
+          opacity: 0.5;
+          border: 1px solid #F8F8F8;
+          box-sizing: border-box;
+          border-radius: 1.4px;
+          width: 193px;
+        }
+
+        &.loading {
+
+        }
+
+
+        &:after {
+          width: 16px;
+          height: 7px;
+          content: "";
+          position: absolute;
+          top: 7px;
+          right: -23px;
+          background: url("../../../img/arr.png");
+
+          @include md {
+            top: 22px;
+            right: 30px;
+          }
+
+          @include sm {
+            top: 22px;
+            right: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  & .where {
+    background: rgba(255,255,255,0.03);
+    margin-top: 40px;
+    border-radius: 2px;
+    padding: 20px 40px 35px 40px;
+    display: flex;
+    justify-content: space-between;
+
+    @include lg{
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    @include md{
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding: 20px;
+    }
+
+    @include sm{
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding: 20px;
+    }
+
+    & .title {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 150%;
+      color: $mainFontColor;
+      width: 30%;
+
+      @include lg{
+        width: 100%;
+      }
+
+      @include md{
+        width: 100%;
+        text-align: center;
+        font-size: 26px;
+        line-height: 35px;
+        margin-bottom: 20px;
+
+      }
+
+      @include sm{
+        width: 100%;
+        text-align: center;
+        font-size: 24px;
+        line-height: 33px;
+      }
+
+    }
+
+    & .list {
+      width: 30%;
+
+      @include lg{
+        width: 40%;
+      }
+
+      @include md{
+        width: 100%;
+      }
+
+      @include sm{
+        width: 100%;
+      }
+
+      & ul {
+
+        padding-top: 20px;
+
+        @include md {
+          padding: 0;
+        }
+
+        @include sm {
+          padding: 0;
+        }
+
+
+
+        li {
+          font-size: 16px;
+          line-height: 115.68%;
+          color: #FFFFFF;
+          position: relative;
+          margin-left: 20px;
+          height: 40px;
+
+
+          @include sm{
+            height: auto;
+            margin-top: 10px;
+            line-height: 115.68%;
+          }
+
+          @include sm{
+            height: auto;
+            margin-top: 10px;
+            line-height: 22px;
+          }
+
+          &:before {
+            background: url("../../../img/disc.png");
+            content: "";
+            position: absolute;
+            top: 6px;
+            left: -20px;
+            width: 6px;
+            height: 6px;
+
+            @include md{
+              top: 8px;
+            }
+
+            @include sm{
+              top: 8px;
+            }
+
+          }
+        }
+      }
+
+    }
+  }
+}

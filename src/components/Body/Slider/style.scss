@@ -1,0 +1,122 @@
+@import "../../../scss/utils/mixins";
+@import "../../../scss/utils/vars";
+
+.slider {
+  width: 100%;
+  padding-top: 70px;
+
+  & h2 {
+    font-size: 30px;
+    line-height: 115.68%;
+    text-align: center;
+    color:$mainFontColor;
+    margin-bottom: 40px;
+
+    @include md {
+      font-size: 26px;
+    }
+  }
+
+  & .carousel {
+
+    & .control-next.control-arrow {
+      opacity: 0.5;
+
+      &:hover{
+        opacity: 1;
+      }
+
+      & .carousel-wrapper{
+        width: 100%;
+      }
+
+      &:before {
+        content: '';
+        background: url("../../../img/arr-right.png");
+        width: 32px;
+        height: 99px;
+        border: 0;
+
+        @include lg {
+          background: url("../../../img/arr-rightLg.png");
+          width: 25px;
+          height: 79px;
+        }
+
+        @include md {
+          background: url("../../../img/arr-rightMd.png");
+          width: 30px;
+          height: 97px;
+        }
+
+        @include sm {
+          background: url("../../../img/arr-rightSm.png");
+          width: 15px;
+          height: 50px;
+        }
+
+
+      }
+    }
+
+    & .thumbs-wrapper {
+      margin: 20px 0;
+
+        & .control-next.control-arrow, & .control-prev.control-arrow  {
+          display: none;
+        }
+
+    }
+
+    & .thumb {
+      border:  0;
+      width: 14.3%;
+      cursor: pointer;
+
+      @include lg {
+        width: 22% !important;
+      }
+
+      @include md {
+        width: 13% !important;
+      }
+
+      @include sm {
+        width: 22% !important;
+      }
+    }
+    & .control-prev.control-arrow {
+      opacity: 0.5;
+
+      &:hover{
+        opacity: 1;
+      }
+
+      &:before {
+        content: '';
+        background: url("../../../img/arr-left.png");
+        width: 32px;
+        height: 99px;
+        border: 0;
+
+        @include lg {
+          background: url("../../../img/arr-leftLg.png");
+          width: 25px;
+          height: 79px;
+        }
+
+        @include md {
+          background: url("../../../img/arr-leftMd.png");
+          width: 30px;
+          height: 97px;
+        }
+
+        @include sm {
+          background: url("../../../img/arr-leftSm.png");
+          width: 15px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}

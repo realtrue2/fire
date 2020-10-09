@@ -1,0 +1,269 @@
+@import "../../../scss/utils/mixins";
+@import "../../../scss/utils/vars";
+
+.partner {
+  padding-top: 40px;
+
+  & legend {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+
+    @include lg {
+      text-align: left;
+    }
+
+    @include sm {
+      font-size: 16px;
+      font-weight: normal;
+      text-align: center;
+    }
+  }
+
+  & h2 {
+    font-size: 30px;
+    line-height: $mainLineHeight;
+    color: $mainFontColor;
+    text-align: center;
+    width: 100%;
+
+    @include sm {
+      font-size: 24px;
+      font-weight: normal;
+    }
+  }
+
+  & p {
+    margin-top: 30px;
+    font-size: $mainFontSize;
+    line-height: 115.68%;
+    text-align: center;
+    color: $mainFontColor;
+
+    @include sm {
+      text-align: left;
+    }
+  }
+
+  & p.grey {
+
+    opacity: 0.2;
+    font-size: 14px;
+    margin-top: 10px;
+
+    @include sm {
+      text-align: left;
+    }
+  }
+
+  & .fonds {
+    width: 769px;
+    padding: 34px;
+    margin: 40px auto 0 auto;
+    border: 1px solid rgba(255, 255, 255, .1);
+    box-sizing: border-box;
+    border-radius: 2px;
+    position: relative;
+
+    @include lg {
+      width: 769px;
+    }
+
+    @include md {
+      width: 100%;
+    }
+
+    @include sm {
+      width: 100%;
+    }
+
+    & ul {
+
+      display: flex;
+      justify-content: space-between;
+
+      @include sm {
+        flex-wrap: wrap;
+      }
+    }
+
+    & p.text {
+      background: #3E161F;
+      font-size: 14px;
+      line-height: 115.68%;
+      color: $mainFontColor;
+      width: 210px;
+      position: absolute;
+      top: -8px;
+      text-align: center;
+      left: calc(50% - 105px);
+      margin: 0;
+    }
+
+    & li {
+      width: 50%;
+
+      & a {
+        display: block;
+        height: 93px;
+        background-repeat: no-repeat;
+
+        &.alliance {
+          background-image: url("../../../img/alliance.png");
+
+          @include md {
+            background-image: url("../../../img/logo3Sm.png");
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+          }
+
+          @include sm {
+            background-image: url("../../../img/logo3Sm.png");
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+          }
+        }
+
+        &.global {
+          background-image: url("../../../img/global.png");
+
+          @include md {
+            background-image: url("../../../img/logo GWCMd.png");
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+          }
+
+          @include sm {
+            background-image: url("../../../img/logo GWCMd.png");
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+          }
+        }
+      }
+
+      & p {
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+        line-height: $mainLineHeight;
+        display: none;
+
+        @include md{
+          display: block;
+        }
+
+        @include sm{
+          display: block;
+        }
+      }
+    }
+  }
+
+  & .partners {
+    width: 769px;
+    padding: 34px;
+    margin: 40px auto 0 auto;
+    border: 1px solid rgba(255, 255, 255, .1);
+    box-sizing: border-box;
+    border-radius: 2px;
+    position: relative;
+
+
+    @include md {
+      width: 100%;
+    }
+    @include sm {
+      width: 100%;
+    }
+
+
+    & ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    & p.text {
+      background: #3E161F;
+      font-size: 14px;
+      line-height: 115.68%;
+      color: $mainFontColor;
+      width: 70px;
+      position: absolute;
+      top: -8px;
+      text-align: center;
+      left: calc(50% - 35px);
+      margin: 0;
+    }
+
+    & li {
+      width: 20%;
+
+      @include md {
+        width: 50%;
+        margin-bottom: 25px;
+      }
+
+      @include sm {
+        width: 126px;
+        margin-bottom: 25px;
+      }
+
+      & a {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        & .img {
+          width: 100px;
+          height: 48px;
+          display: block;
+          background-position: center;
+          background-repeat: no-repeat;
+          margin-bottom: 7px;
+
+          &.oxygen {
+            background-image: url("../../../img/oxygen.png");
+          }
+
+          &.bush {
+            background-image: url("../../../img/bush.png");
+          }
+
+          &.wires {
+            background-image: url("../../../img/wires.png");
+          }
+
+          &.aussie {
+            background-image: url("../../../img/aussie.png");
+          }
+
+          &.emerson {
+            background-image: url("../../../img/emerson.png");
+          }
+        }
+
+        & .name {
+          font-size: 14px;
+          line-height: 115.68%;
+          text-align: center;
+          color: #FFFFFF;
+          margin-top: 5px;
+
+          @include md {
+            width: 100%;
+          }
+
+          @include sm {
+            width: 100%;
+          }
+
+        }
+      }
+    }
+  }
+}

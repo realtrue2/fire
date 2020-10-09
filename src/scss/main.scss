@@ -1,0 +1,86 @@
+@import './utils/vars';
+@import './utils/mixins';
+
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+  line-height: $mainLineHeight;
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+  height: 100%;
+  scroll-behavior: smooth;
+
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+
+}
+#root {
+  background: linear-gradient(180deg, #3E161F 0%, #281517 100%);
+
+  @include md {
+    overflow: hidden;
+  }
+
+  @include sm {
+    overflow: hidden;
+  }
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+
+.wrap {
+  width: 1170px;
+  margin: 0 auto;
+  position: relative;
+
+  @include lg {
+    width: 95%;
+  }
+
+  @include md {
+    width: 95%;
+  }
+  @include sm {
+    width: 95%;
+  }
+
+}
+span.bold {
+  font-weight: bold;
+}

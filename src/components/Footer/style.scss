@@ -1,0 +1,320 @@
+@import "../../scss/utils/mixins";
+@import "../../scss/utils/vars";
+
+footer {
+  padding-top: 26px;
+
+
+  & .wrap {
+    width: 824px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: url("../../img/footerbg.png") no-repeat center;
+    background-size: contain;
+
+    @include lg {
+      width: 95%;
+    }
+
+    @include md {
+      width: 95%;
+    }
+
+    @include sm {
+      width: 100%;
+      background: url("../../img/footerbg2.png") no-repeat;
+    }
+  }
+
+  & .title {
+    font-size: 30px;
+    line-height: 41px;
+    text-align: center;
+    color: $mainFontColor;
+    margin-top: 112px;
+
+    @include md{
+      font-size: 26px;
+      line-height: 35px;
+    }
+
+    @include sm {
+      font-size: 24px;
+      line-height: 33px;
+      margin-top: 80px;
+    }
+
+   & span{
+      width: 100%;
+      font-weight: bold;
+    }
+  }
+
+  & .tag {
+    background: url("../../img/CryptoForAustralia.png");
+    width: 291px;
+    height: 31px;
+    margin-top: 40px;
+
+    @include sm {
+      width: 233px;
+      height: 25px;
+      background: url("../../img/CryptoForAustralia2.png");
+    }
+  }
+
+  & .social-links {
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+    width: 755px;
+    margin-bottom: 312px;
+    flex-wrap: wrap;
+
+    @include md {
+      width: 100%;
+      margin: 45px 15px 0 15px;
+    }
+
+    @include sm {
+      width: 100%;
+      margin: 45px 15px 0 15px;
+
+    }
+
+    & .link {
+      width: 170px;
+      padding: 12px 10px 12px 50px;
+      background: #FFFFFF;
+      border-radius: 1.2px;
+      position: relative;
+
+      & p{
+        font-weight: 600;
+        font-size: 15.2596px;
+        line-height: 21px;
+        position: relative;
+        text-align: center;
+
+        @include md {
+          font-size: 14px;
+          line-height: 19px;
+        }
+
+
+        @include sm {
+          font-size: 14px;
+          line-height: 19px;
+        }
+
+        &:before {
+          position: absolute;
+          left: -15px;
+          content: '';
+          width: 23px;
+          height: 23px;
+          display: block;
+          background-position: center;
+          background-repeat: no-repeat;
+
+
+        }
+
+        &.twitter {
+          &:before {
+            background-image: url("../../img/Twitter2.svg");
+          }
+        }
+
+        &.whatsapp {
+          &:before {
+            background-image: url("../../img/WhatsApp2.svg");
+          }
+        }
+
+        &.telegram {
+          &:before {
+            background-image: url("../../img/Telegram2.svg");
+          }
+        }
+
+        &.facebook {
+          &:before {
+            background-image: url("../../img/Facebook2.svg");
+          }
+        }
+      }
+
+      @include md {
+        width: 47%;
+        min-width: 130px;
+      }
+
+
+      @include sm {
+        width: 47%;
+        min-width: 130px;
+      }
+
+
+
+      &:after {
+        position: absolute;
+        content: '';
+      }
+
+      &:hover {
+        background: linear-gradient(180deg, #FFFFFF 36.9%, #DBF6FF 100%);
+        box-shadow: 0 2px 56px rgba(255, 255, 255, 0.63);
+      }
+
+      &.twitter {
+
+        @include md {
+          order: 1;
+          margin-bottom: 20px;
+        }
+
+        @include sm {
+          order: 1;
+          margin-bottom: 20px;
+        }
+        color: #0598FF;
+
+
+        &:after {
+          background-image: url("../../img/koala1.svg");
+          width: 84px;
+          height: 62px;
+          bottom: 100%;
+          left: 0;
+
+          @include md {
+            content: none;
+          }
+
+          @include sm {
+            content: none;
+          }
+        }
+      }
+
+      &.whatsapp {
+
+        @include md {
+          order: 3;
+        }
+
+        @include sm {
+          order: 3;
+        }
+        color: #26D367;
+
+
+        &:after {
+          background-image: url("../../img/koala4.svg");
+          width: 86px;
+          height: 91px;
+          top: -1px;
+          right: 0;
+        }
+      }
+
+      &.telegram {
+
+        @include md {
+          order: 2;
+          margin-bottom: 20px;
+        }
+
+        @include sm {
+          order: 2;
+          margin-bottom: 20px;
+        }
+        color: #54A9EA;
+
+
+        &:after {
+          background-image: url("../../img/koala2.svg");
+          width: 59px;
+          height: 41px;
+          bottom: 90%;
+          right: -5px;
+
+          @include md {
+            content: none;
+          }
+
+          @include sm {
+            content: none;
+          }
+        }
+      }
+
+      &.facebook {
+
+        @include md {
+          order: 4;
+        }
+
+        @include sm {
+          order: 4;
+        }
+        color: #29487E;
+
+
+        &:after {
+          background-image: url("../../img/koala3.svg");
+          width: 77px;
+          height: 60px;
+          right: 15px;
+          top: -28px;
+
+          @include md {
+            background-image: url("../../img/koala2.svg");
+            width: 59px;
+            height: 41px;
+            top: -36px;
+            right: -5px;
+          }
+
+          @include sm {
+            background-image: url("../../img/koala2.svg");
+            width: 59px;
+            height: 41px;
+            top: -36px;
+            right: -5px;
+          }
+        }
+      }
+    }
+  }
+
+  & .firefighter {
+    padding-top: 40px;
+    position: relative;
+    width: 100%;
+
+    @include md {
+      padding-top: 300px;
+    }
+
+    @include sm {
+      padding-top: 300px;
+    }
+
+    &:after {
+      content: '';
+      background-image: url("../../img/firefighter 1.png");
+      width: 176px;
+      height: 242px;
+      position: absolute;
+      display: block;
+      transform: translateX(-50%);
+      left: 50%;
+      bottom: 0;
+    }
+  }
+
+}
